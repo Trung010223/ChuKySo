@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %}Bảng điều khiển{% endblock %} {%
+block content %}
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center p-4"
+>
+  <div
+    class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl"
+  >
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+      Xin chào, {{ username }}!
+    </h2>
+    <p class="text-center text-gray-600 mb-8">Chọn một hành động để bắt đầu:</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href="{{ url_for('file.upload') }}"
+        class="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg shadow-md hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <span class="mr-2">📤</span> Gửi tệp
+        <span
+          class="absolute inset-0 rounded-lg bg-green-600 opacity-0 hover:opacity-20 transition-opacity"
+        ></span>
+      </a>
+      <a
+        href="{{ url_for('file.received_files') }}"
+        class="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <span class="mr-2">📥</span> Tệp đã nhận
+        <span
+          class="absolute inset-0 rounded-lg bg-blue-600 opacity-0 hover:opacity-20 transition-opacity"
+        ></span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

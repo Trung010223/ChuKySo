@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block title %}Tệp đã nhận{% endblock %} {% block
+content %}
+<div class="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 py-8 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+      Tệp đã nhận
+    </h2>
+
+    {% if files %}
+    <div class="overflow-x-auto bg-white rounded-2xl shadow-xl">
+      <table class="w-full table-auto border-collapse">
+        <thead>
+          <tr class="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+            <th class="px-6 py-4 text-left font-semibold">Người gửi</th>
+            <th class="px-6 py-4 text-left font-semibold">Tên tệp</th>
+            <th class="px-6 py-4 text-left font-semibold">SHA-256</th>
+            <th class="px-6 py-4 text-left font-semibold">Tải xuống</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for file in files %}
+          <tr class="border-b hover:bg-gray-50 transition-colors">
+            <td class="px-6 py-4 text-gray-700">{{ file.from }}</td>
+            <td class="px-6 py-4 text-gray-700">{{ file.filename }}</td>
+            <td class="px-6 py-4">
+              <small class="text-gray-600 break-all">{{ file.hash }}</small>
+            </td>
+            <td class="px-6 py-4">
+              <a
+                href="{{ url_for('file.verify_download', filename=file.stored_as) }}"
+                class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg shadow-md hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                ⬇️ Tải xuống
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="text-center bg-white rounded-2xl shadow-xl p-8">
+      <p class="text-gray-600 text-lg">Chưa có tệp nào được nhận.</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

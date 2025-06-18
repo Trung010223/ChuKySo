@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block title %}Đăng ký tài khoản{% endblock %} {%
+block content %}
+<div
+  class="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-4"
+>
+  <div
+    class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl"
+  >
+    <h3 class="text-3xl font-bold text-center text-gray-800 mb-6">
+      📝 Đăng ký tài khoản
+    </h3>
+    <form method="POST" action="{{ url_for('auth.register') }}">
+      <div class="mb-5">
+        <label for="username" class="block text-gray-700 font-medium mb-2"
+          >Tên đăng nhập</label
+        >
+        <input
+          type="text"
+          class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+          id="username"
+          name="username"
+          placeholder="Nhập tên đăng nhập"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label for="password" class="block text-gray-700 font-medium mb-2"
+          >Mật khẩu</label
+        >
+        <input
+          type="password"
+          class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+          id="password"
+          name="password"
+          placeholder="Nhập mật khẩu"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 rounded-lg shadow-md hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
+      >
+        Đăng ký
+      </button>
+      <div class="text-center mt-4">
+        <p class="text-gray-600">
+          Đã có tài khoản?
+          <a
+            href="{{ url_for('auth.login') }}"
+            class="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >Đăng nhập</a
+          >
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
