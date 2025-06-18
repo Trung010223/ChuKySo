@@ -8,7 +8,6 @@
   <li>📤 Gửi file kèm chữ ký số RSA</li>
   <li>📥 Tải file và kiểm tra tính toàn vẹn SHA-256</li>
   <li>🔑 Xác minh chữ ký số người gửi</li>
-  <li>🧾 Giao diện đẹp, dễ sử dụng với Bootstrap</li>
   <li>🌐 Hoạt động trên nền web sử dụng Flask (Python)</li>
 </ul>
 
