@@ -18,4 +18,4 @@
   <li><strong>Front-end:</strong> HTML, CSS, Bootstrap</li>
   <li><strong>Bảo mật:</strong> SHA-256, RSA (2048-bit)</li>
 </ul>
-<img src="[https://drive.google.com/uc?export=view&id=1AbCDEFGHIJklMnOPq](https://drive.google.com/file/d/184dJm-5j5FtrTVqrg9uEbjQ55ueoPKdf/view?usp=drive_link)" alt="Giao diện ứng dụng" width="600">
+<img src="https://i.ibb.co/yngFKZP4/Screenshot-2025-06-18-091629.png" alt="Screenshot-2025-06-18-091629" border="0">
