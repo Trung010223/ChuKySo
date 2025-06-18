@@ -19,5 +19,5 @@
   <li><strong>Bảo mật:</strong> SHA-256, RSA (2048-bit)</li>
 </ul>
 <img src="https://i.ibb.co/yngFKZP4/Screenshot-2025-06-18-091629.png" alt="Screenshot-2025-06-18-091629" border="0" width"600">
-<img src="https://i.ibb.co/CpxPCSZC/Screenshot-2025-06-18-091718.png" alt="Screenshot-2025-06-18-091718" border="0" width"600">
+<img src="https://i.ibb.co/CpxPCSZC/Screenshot-2025-06-18-091718.png" alt="Screenshot-2025-06-18-091718" border="0" >
 <img src="https://i.ibb.co/8n5mypsw/Screenshot-2025-06-18-091754.png" alt="Screenshot-2025-06-18-091754" border="0" width"600">
